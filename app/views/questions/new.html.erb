@@ -1,0 +1,19 @@
+<%= form_for @question do |f| %> 
+	
+	<div class="form-group">
+	<%= f.label :title, "My Title" %>
+	<%= f.text_field :title, class: "form-control" %>
+	</div>
+	<br>
+
+	<div class="form-group">
+	<%= f.label :body %>
+	<%= f.text_area :body, class: "form-control" %>
+	<br>
+    </div>
+
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+	<%= link_to "Back", questions_path, class: "btn btn-danger" %>
+
+<% end %>
+
